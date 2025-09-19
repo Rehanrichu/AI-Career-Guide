@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Your AI Career Path 🎯</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+        <nav>
+            <a href="/">Home</a> |
+            <a href="/about">About</a>
+        </nav>
+
+        <div class="container">
+            <!-- Existing page content -->
+        </div>
+
+        <div class="container">
+            <h1>🌟 Congratulations, {{ name }}! 🌟</h1>
+            <p class="tagline">Based on your answers, here’s your AI career path:</p>
+            <div class="career-card">
+                <h2>{{ career_name }}</h2>
+                <p class="description">{{ description }}</p>
+                <h3>🛠 Skills Required:</h3>
+                <ul>
+                    {% for skill in skills %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+                <h3>📚 Free Resources:</h3>
+                <ul class="resources">
+                    {% for resource in resources %}
+                        <li>
+                            {% if 'youtube.com/embed/' in resource %}
+                                <iframe width="320" height="180" src="{{ resource }}" frameborder="0" allowfullscreen></iframe>
+                            {% else %}
+                                <a href="{{ resource }}" target="_blank">Learn Here</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <p class="motivation">💡 {{ motivation }}</p>
+            </div>
+            <a href="/" class="submit-btn">🔄 Try Again</a>
+        </div>
+    </body>
+
+</html>
