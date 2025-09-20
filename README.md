@@ -1,9 +1,6 @@
 # AI Career Path
 
 #### Video Demo: (https://youtu.be/ovpX3RWgSr8?si=x57FHvoLcnpG54QX)
-#### GitHub Repository: https://github.com/YOUR_USERNAME/YOUR_REPO  
-
----
 
 ### 📌 Description
 The **AI Career Path** is my final project for **CS50x**. It is an interactive tool that helps students and beginners discover their ideal career path within the vast field of Artificial Intelligence.  
